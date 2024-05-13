@@ -1,5 +1,8 @@
 package FactoryMethod;
 
+import Restaurantes.Restaurante;
+import Restaurantes.RestauranteMexicano;
+
 public class RestauranteMexicanoFactory implements RestauranteFactory {
     @Override
     public Restaurante crearRestaurante() {
