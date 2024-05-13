@@ -25,7 +25,7 @@ public class SistemaExternoAdapter implements SistemaReserva {
         LocalDateTime fecha = LocalDateTime.parse(fechaStr, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
 
         System.out.println("Por favor, ingrese el sitio de la reserva:");
-        int numeroMesa = scanner.nextInt()
+        int numeroMesa = scanner.nextInt();
 
         Reserva reserva = new Reserva(usuario, fecha, numeroMesa);
         reservas.add(reserva);

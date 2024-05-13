@@ -2,7 +2,7 @@ package Restaurantes;
 
 import Restaurantes.*;
 public interface Restaurante {
-    void pedirComida(String primerPlato, String segundoPlato, String postre);
+    void pedirComida(int primerPlato, int segundoPlato, int postre);
     void prepararComida();
 
 }

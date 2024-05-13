@@ -10,7 +10,7 @@ public class RestauranteLujo implements Restaurante {
     }
 
     @Override
-    public void pedirComida(String primerPlato, String segundoPlato, String postre) {
+    public void pedirComida(int primerPlato, int segundoPlato, int postre) {
         System.out.println("Pedido en restaurante de lujo temático: Primer plato - " + seleccionarPrimerPlato()
                 + ", Segundo plato - " + seleccionarSegundoPlato() + ", Postre - " + seleccionarPostre());
     }
