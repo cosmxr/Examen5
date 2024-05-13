@@ -1,13 +1,13 @@
 package SistemaReserva;
 
+import java.time.LocalDateTime;
+
 public class SistemaExterno {
-    public void hacerReserva(int numeroMesa) {
-        // Aquí es donde se implementaría la lógica para hacer una reserva
-        System.out.println("Reserva realizada para la mesa número: " + numeroMesa);
+    public void hacerReserva(LocalDateTime fecha, String sitio) {
+        System.out.println("Reserva realizada para la fecha: " + fecha + " en el sitio: " + sitio);
     }
 
     public void enviarComida(String direccion) {
-        // Aquí es donde se implementaría la lógica para enviar comida
         System.out.println("Comida enviada a la dirección: " + direccion);
     }
 }

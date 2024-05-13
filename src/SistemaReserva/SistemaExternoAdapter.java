@@ -1,5 +1,9 @@
 package SistemaReserva;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 public class SistemaExternoAdapter implements SistemaReserva {
     private SistemaExterno sistemaExterno;
 
@@ -9,7 +13,16 @@ public class SistemaExternoAdapter implements SistemaReserva {
 
     @Override
     public void reservarMesa(int numeroMesa) {
-        sistemaExterno.hacerReserva(numeroMesa);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Por favor, ingrese la fecha de la reserva (formato: yyyy-MM-dd HH:mm):");
+        String fechaStr = scanner.nextLine();
+        LocalDateTime fecha = LocalDateTime.parse(fechaStr, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+
+        System.out.println("Por favor, ingrese el sitio de la reserva:");
+        String sitio = scanner.nextLine();
+
+        sistemaExterno.hacerReserva(fecha, sitio);
     }
 
     @Override
